@@ -1,6 +1,7 @@
 models:
   - name: customers
-    description: Customer overview data mart, offering key details for each unique customer. One row per customer.
+    description: Customer overview data mart, offering key details for each unique
+      customer. One row per customer.
     columns:
       - name: customer_id
         description: The unique key of the orders mart.
@@ -16,14 +17,17 @@ models:
       - name: last_ordered_at
         description: The timestamp of a customer's most recent order.
       - name: lifetime_spend_pretax
-        description: The sum of all the pre-tax subtotals of every order a customer has placed.
+        description: The sum of all the pre-tax subtotals of every order a customer
+          has placed.
       - name: lifetime_spend
-        description: The sum of all the order totals (including tax) that a customer has ever placed.
+        description: The sum of all the order totals (including tax) that a customer
+          has ever placed.
       - name: customer_type
-        description: Options are 'new' or 'returning', indicating if a customer has ordered more than once or has only placed their first order to date.
+        description: Options are 'new' or 'returning', indicating if a customer has
+          ordered more than once or has only placed their first order to date.
         tests:
           - accepted_values:
-              values: ["new", "returning"]
+              values: [new, returning]
 
 semantic_models:
   - name: customers
@@ -38,8 +42,6 @@ semantic_models:
         type: primary
     dimensions:
       - name: customer_name
-        type: categorical
-      - name: customer_type
         type: categorical
       - name: first_ordered_at
         type: time
@@ -63,7 +65,7 @@ semantic_models:
 metrics:
   # Simple metrics
   - name: customers_with_orders
-    description: "Distict count of customers placing orders"
+    description: Distict count of customers placing orders
     type: simple
     label: Customers w/ Orders
     type_params:
