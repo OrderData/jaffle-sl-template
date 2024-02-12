@@ -101,9 +101,9 @@ metrics:
     type_params:
       measure: order_total
   - name: large_order
-    description: "Count of orders with order total over 20."
+    description: Count of orders with order total over 20.
     type: simple
-    label: "Large Orders"
+    label: Large Orders
     type_params:
       measure: order_count
     filter: |
@@ -122,3 +122,11 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  - name: aaaaa
+    description: ''
+    type: simple
+    label: Aaaaa
+    type_params:
+      measure: order_count
+    filter: |-
+      {{Dimension('order_id__is_drink_order')}} = 'true'
