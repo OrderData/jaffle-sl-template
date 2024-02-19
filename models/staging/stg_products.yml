@@ -28,8 +28,6 @@ semantic_models:
         type: categorical
       - name: product_description
         type: categorical
-      - name: is_food_item
-        type: categorical
       - name: is_drink_item
         type: categorical
       - name: product_price
