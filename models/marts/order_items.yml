@@ -110,3 +110,11 @@ metrics:
     type: cumulative
     type_params:
       measure: revenue
+  - name: new_metric_5
+    description: ''
+    type: simple
+    label: new_metric 5
+    type_params:
+      measure: revenue
+    filter: |
+      {{Dimension('order_item__is_food_item') }} is not null
