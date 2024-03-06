@@ -71,15 +71,6 @@ metrics:
       measure: food_revenue
 
   #Ratio Metrics
-  - name: food_revenue_pct
-    description: The % of order revenue from food.
-    label: Food Revenue %
-    type: ratio
-    type_params:
-      numerator: food_revenue
-      denominator: revenue
-
-  #Derived Metrics
   - name: revenue_growth_mom
     description: "Percentage growth of revenue compared to 1 month ago. Excluded tax"
     type: derived
