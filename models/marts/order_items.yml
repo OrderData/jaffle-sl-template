@@ -110,3 +110,16 @@ metrics:
     type: cumulative
     type_params:
       measure: revenue
+  - name: perc_revenenue_beverage
+    description: ''
+    type: ratio
+    label: '% revenenue Beverage'
+    type_params:
+      numerator:
+        name: revenue
+        alias: revenue_product_type_beverage
+        filter: |
+          {{Dimension('product__product_type')}} = 'beverage'
+      denominator:
+        name: revenue
+        alias: revenue_
