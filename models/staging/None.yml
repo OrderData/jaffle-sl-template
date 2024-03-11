@@ -1,0 +1,11 @@
+version: 2
+semantic_models:
+  - name: supply
+    model: ref('stg_supplies')
+    label: Supply
+    defaults:
+      agg_time_dimension:
+    entities:
+      - name: supply
+        type: primary
+        expr: supply_id
