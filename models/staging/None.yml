@@ -1,0 +1,12 @@
+version: 2
+semantic_models:
+  - name: supply
+    model: ref('stg_supplies')
+    label: Supply
+    description: "List of our supply expenses data with basic cleaning and transformation applied.\nOne row per supply cost, not per supply. As supply costs fluctuate they receive a new row with a new UUID. Thus there can be multiple rows per supply_id.\n"
+    defaults:
+      agg_time_dimension:
+    entities:
+      - name: supply
+        type: primary
+        expr: supply_id
