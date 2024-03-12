@@ -1,0 +1,17 @@
+version: 2
+semantic_models:
+  - name: new_semantic_model
+    model: ref('order_items')
+    label: New semantic model
+    defaults:
+      agg_time_dimension: ordered_at
+    entities:
+      - name: order
+        type: primary
+        expr: order_id
+    dimensions:
+      - name: ordered_at
+        type: time
+        type_params:
+          time_granularity: day
+        expr: ordered_at
