@@ -37,8 +37,6 @@ semantic_models:
         expr: customer_id
         type: primary
     dimensions:
-      - name: customer_name
-        type: categorical
       - name: customer_type
         type: categorical
       - name: first_ordered_at
