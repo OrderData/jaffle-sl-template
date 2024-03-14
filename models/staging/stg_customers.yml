@@ -7,3 +7,19 @@ models:
         tests:
           - not_null
           - unique
+semantic_models:
+  - name: stg_customers
+    model: ref('stg_customers')
+    label: Customers 2
+    defaults:
+      agg_time_dimension: first_ordered_new
+    entities:
+      - name: customer
+        type: primary
+        expr: customer_id
+    dimensions:
+      - name: first_ordered_new
+        type: time
+        type_params:
+          time_granularity: day
+        expr: first_ordered_at
