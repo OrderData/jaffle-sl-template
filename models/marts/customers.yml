@@ -45,6 +45,7 @@ semantic_models:
         type: time
         type_params:
           time_granularity: day
+        description: Just a description to test
       - name: last_ordered_at
         type: time
         type_params:
