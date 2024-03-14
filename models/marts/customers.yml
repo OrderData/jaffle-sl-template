@@ -30,7 +30,7 @@ semantic_models:
     defaults:
       agg_time_dimension: first_ordered_at
     description: |
-      Customer grain mart.
+      Customer mart.
     model: ref('customers')
     entities:
       - name: customer
