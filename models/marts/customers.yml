@@ -34,7 +34,7 @@ semantic_models:
     model: ref('customers')
     entities:
       - name: customer
-        expr: customer_id
+        expr: customer_id_2
         type: primary
     dimensions:
       - name: customer_name
@@ -45,6 +45,7 @@ semantic_models:
         type: time
         type_params:
           time_granularity: day
+        description: Just a description to test
       - name: last_ordered_at
         type: time
         type_params:
