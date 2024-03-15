@@ -52,6 +52,7 @@ semantic_models:
     entities:
       - name: order_id
         type: primary
+        expr:
       - name: location
         type: foreign
         expr: location_id
@@ -60,7 +61,7 @@ semantic_models:
         expr: customer_id
     dimensions:
       - name: ordered_at
-        expr: ordered_at
+        expr:
         type: time
         type_params:
           time_granularity: day
