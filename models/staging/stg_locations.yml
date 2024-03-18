@@ -32,3 +32,20 @@ semantic_models:
         description: Average tax rate.
         expr: tax_rate
         agg: average
+  - name: location
+    model: ref('stg_locations')
+    label: Location
+    description: |-
+      List of open locations with basic cleaning and transformation applied, one row per location.
+    defaults:
+      agg_time_dimension: opened_at
+    entities:
+      - name: location_pk
+        type: primary
+        expr: location_id
+    dimensions:
+      - name: opened_at
+        type: time
+        type_params:
+          time_granularity: day
+        expr: opened_at
