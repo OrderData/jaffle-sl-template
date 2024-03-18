@@ -7,3 +7,14 @@ models:
         tests:
           - not_null
           - unique
+semantic_models:
+  - name: staging_order_items
+    model: ref('stg_order_items')
+    label: Order items (staging)
+    description: |-
+      This is a staging semantic model for order items.
+    entities:
+      - name: order_item
+        type: primary
+        description: Primary entity related to order_item element.
+        expr: order_item_id
