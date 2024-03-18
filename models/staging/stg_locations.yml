@@ -10,8 +10,10 @@ models:
 
 semantic_models:
   - name: locations
-    description: |
+    label: Location
+    description: |+
       Location dimension table. The grain of the table is one row per location.
+
     model: ref('stg_locations')
     defaults:
       agg_time_dimension: opened_at
