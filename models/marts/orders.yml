@@ -122,3 +122,16 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  - name: new_metric
+    description: ''
+    type: derived
+    label: New metric
+    type_params:
+      expr: order_total_filtered+large_order
+      metrics:
+        - name: order_total
+          alias: order_total_filtered
+          offset_window: 1 month
+          filter: |
+            {{ Dimension('order_id__order_total_dim') }} >= 40
+        - name: large_order
