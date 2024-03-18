@@ -1,7 +1,7 @@
 semantic_models:
   - name: order_item
     defaults:
-      agg_time_dimension: ordered_at
+      agg_time_dimension: ordered_at_time
     description: |
       Items contatined in each order. The grain of the table is one row per order item.
     model: ref('order_items')
@@ -16,8 +16,8 @@ semantic_models:
         type: foreign
         expr: product_id
     dimensions:
-      - name: ordered_at
-        expr: cast(ordered_at as DATETIME)
+      - name: ordered_at_time
+        expr: ordered_at
         type: time
         type_params:
           time_granularity: day
