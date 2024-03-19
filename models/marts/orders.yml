@@ -122,3 +122,12 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  - name: new_metric_7
+    description: ''
+    type: ratio
+    label: new_metric 7
+    type_params:
+      numerator:
+        name: order_total
+      denominator:
+        name: large_order
