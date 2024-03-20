@@ -10,12 +10,11 @@ models:
 
 semantic_models:
   #The name of the semantic model.
-  - name: stg_products
+  - name: product
+    label: Product
     description: |
       Product dimension table. The grain of the table is one row per product.
-    #The name of the dbt model and schema
     model: ref('stg_products')
-    #Entities. These usually corespond to keys in the table.
     entities:
       - name: product
         type: primary
