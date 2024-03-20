@@ -60,6 +60,12 @@ semantic_models:
         agg: sum
         description: Gross customer lifetime spend inclusive of taxes.
 
+      - name: new_measure
+        description: This is a measure which can give place to a metric
+        label: New measure
+        expr: count_lifetime_orders
+        agg: sum
+        create_metric: false
 metrics:
   # Simple metrics
   - name: customers_with_orders
