@@ -38,6 +38,7 @@ semantic_models:
         type: primary
     dimensions:
       - name: customer_name
+        label: Customer name2
         type: categorical
       - name: customer_type
         type: categorical
