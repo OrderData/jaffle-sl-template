@@ -65,7 +65,7 @@ metrics:
   - name: customers_with_orders
     description: Distict count of customers placing orders
     type: simple
-    label: Customers w/ Orders
+    label: Customers w/ Orders new label
     type_params:
       measure: customers_with_orders
   - name: new_customer
