@@ -77,12 +77,6 @@ metrics:
     filter: |
       {{ Dimension('customer__customer_type') }}  = 'new'
 
-  - name: new_superset_metric
-    description: ''
-    type: simple
-    label: New Superset Metric
-    type_params:
-      measure: count_lifetime_orders
 saved_queries:
   - name: new_customer_orders
     description: New customer orders by name and time
