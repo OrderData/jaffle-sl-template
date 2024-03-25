@@ -27,6 +27,10 @@ semantic_models:
         type: time
         type_params:
           time_granularity: day
+      - name: location_short_name
+        label: Location short name
+        type: categorical
+        expr: left(location_name,3) || '.'
     measures:
       - name: average_tax_rate
         description: Average tax rate.
