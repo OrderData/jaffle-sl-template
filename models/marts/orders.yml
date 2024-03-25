@@ -71,6 +71,11 @@ semantic_models:
         type: categorical
       - name: is_drink_order
         type: categorical
+      - name: margin_classification
+        label: Margin classification (%)
+        type: categorical
+        description: 'If the order is '
+        expr: case when order_cost / order_total > 0.3 then 'Low margin' else 'High margin' end
     measures:
       - name: order_total
         description: The total amount for each order including taxes.
