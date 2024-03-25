@@ -20,7 +20,8 @@ semantic_models:
         type: primary
         expr: location_id
     dimensions:
-      - name: location_name
+      - name: location_id
+        label: Location name
         type: categorical
       - name: opened_at
         expr: opened_at
