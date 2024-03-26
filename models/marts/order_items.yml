@@ -97,13 +97,13 @@ metrics:
     type: derived
     label: Order Gross Profit
     type_params:
-      expr: revenue - cost
+      expr: revenue - order_cost_customer_type_returning
       metrics:
         - name: revenue
         - name: order_cost
-          alias: cost
-
-  #Cumulative Metrics
+          alias: order_cost_customer_type_returning
+          filter: |
+            {{Dimension('customer__customer_type')}} = 'returning'
   - name: cumulative_revenue
     description: The cumulative revenue for all orders.
     label: Cumulative Revenue (All Time)
