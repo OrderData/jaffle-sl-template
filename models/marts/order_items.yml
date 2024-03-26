@@ -110,10 +110,3 @@ metrics:
     type: cumulative
     type_params:
       measure: revenue
-  - name: revenue_of_specfic
-    type: simple
-    label: Revenue of specfic
-    type_params:
-      measure: revenue
-    filter: |
-      {{Dimension('product__product_type')}} = 'beverage' and {{Dimension('location__location_name')}} not in ('Chicago', 'San Francisco')
