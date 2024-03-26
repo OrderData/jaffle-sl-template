@@ -110,3 +110,11 @@ metrics:
     type: cumulative
     type_params:
       measure: revenue
+  - name: order_gross_profit
+    description: Gross profit from each order.
+    type: derived
+    label: Order Gross Profit
+    type_params:
+      expr: revenue - cost
+      metrics:
+        - name: revenue
