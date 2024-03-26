@@ -49,6 +49,10 @@ semantic_models:
         type: time
         type_params:
           time_granularity: day
+      - name: customer_name_copy
+        label: Customer name (Copy)
+        type: categorical
+        expr: customer_name
     measures:
       - name: count_lifetime_orders
         description: Total count of orders per customer.
