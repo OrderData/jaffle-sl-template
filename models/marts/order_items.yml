@@ -110,3 +110,9 @@ metrics:
     type: cumulative
     type_params:
       measure: revenue
+  - name: food_revenue_copy
+    description: The revenue from food in each order
+    type: simple
+    label: Food Revenue (Copy)
+    type_params:
+      measure: food_revenue
