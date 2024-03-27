@@ -62,10 +62,9 @@ semantic_models:
 
 metrics:
   # Simple metrics
-  - name: customers_with_orders
-    description: Distict count of customers placing orders
+  - name: customers_with_ordersid_ru4qtv5uq
     type: simple
-    label: Customers w/ Orders
+    label: Customers w/ Ordersid_n86heogzk
     type_params:
       measure: customers_with_orders
   - name: new_customer
