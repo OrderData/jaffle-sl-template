@@ -73,13 +73,15 @@ metrics:
   #Ratio Metrics
   - name: food_revenue_pct
     description: The % of order revenue from food.
-    label: Food Revenue %
+    label: Food Revenue
     type: ratio
     type_params:
-      numerator: food_revenue
+      numerator:
+        name: food_revenue
+        alias: food_revenue_is_food_order_true
+        filter: |
+          {{Dimension('order_id__is_food_order')}} = 'true'
       denominator: revenue
-
-  #Derived Metrics
   - name: revenue_growth_mom
     description: "Percentage growth of revenue compared to 1 month ago. Excluded tax"
     type: derived
