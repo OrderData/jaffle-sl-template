@@ -77,6 +77,13 @@ metrics:
     filter: |
       {{ Dimension('customer__customer_type') }}  = 'new'
 
+  - name: order_items_staging
+    type: simple
+    label: Order items (staging)
+    type_params:
+      measure: count_lifetime_orders
+    filter: |
+      {{Dimension('customer__customer_type')}} = 'new'
 saved_queries:
   - name: new_customer_orders
     description: New customer orders by name and time
