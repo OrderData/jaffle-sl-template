@@ -117,8 +117,3 @@ metrics:
       measure: revenue
     filter: |
       {{Dimension('product__product_type')}} = 'beverage' and {{Dimension('location__location_name')}} not in ('Chicago', 'San Francisco')
-  - name: new_metric_to_test
-    type: simple
-    label: New metric to test
-    type_params:
-      measure: food_revenue
