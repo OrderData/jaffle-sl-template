@@ -73,7 +73,7 @@ semantic_models:
         type: categorical
       - name: is_bulk_transaction
         type: categorical
-        exp: case when quantity > 10 then true else false end
+        expr: case when quantity > 10 then true else false end
     measures:
       - name: order_total
         description: The total amount for each order including taxes.
