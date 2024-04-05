@@ -110,6 +110,13 @@ metrics:
     type: cumulative
     type_params:
       measure: revenue
+  - name: cumulative_revenue_l1m
+    description: Trailing 1 month cumulative order amount
+    label: Cumulative Revenue (Trailing 1 month)
+    type: cumulative
+    type_params: 
+      measure: revenue
+      window: 1 month
   - name: revenue_of_specfic
     type: simple
     label: Revenue of specfic
