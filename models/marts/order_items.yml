@@ -69,8 +69,6 @@ metrics:
     type: simple
     type_params:
       measure: food_revenue
-
-  #Ratio Metrics
   - name: food_revenue_pct
     description: The % of order revenue from food.
     label: Food Revenue %
