@@ -63,14 +63,14 @@ metrics:
     label: Median Revenue
     type_params:
       measure: median_revenue
-  - name: food_revenue
-    description: The revenue from food in each order
-    label: Food Revenue
-    type: simple
-    type_params:
+  - type_params:
       measure: food_revenue
-
-  #Ratio Metrics
+    name: food_revenueid_2bikx4pof
+    description: The revenue from food in each order Test
+    label: Food Revenueid_vqnlqrc09
+    type: simple
+    filter: |
+      {{Dimension('product__is_food_item')}} = 1
   - name: food_revenue_pct
     description: The % of order revenue from food.
     label: Food Revenue %
