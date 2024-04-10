@@ -93,6 +93,15 @@ semantic_models:
         description: The cost for each order item. Cost is calculated as a sum of the supply cost for each order item.
         agg: sum
 
+      - name: aa
+        label: aa
+        expr: order_cost
+        agg: percentile
+        create_metric: true
+        agg_params:
+          percentile: 0.5
+          use_discrete_percentile: false
+          use_approximate_percentile: false
 metrics:
   - name: order_total
     description: Sum of total order amonunt. Includes tax + revenue.
