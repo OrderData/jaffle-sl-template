@@ -117,3 +117,12 @@ metrics:
       measure: revenue
     filter: |
       {{Dimension('product__product_type')}} = 'beverage' and {{Dimension('location__location_name')}} not in ('Chicago', 'San Francisco')
+  - name: food_revenue_copy
+    description: The revenue from food in each order
+    type: simple
+    label: Food Revenue (Copy)
+    type_params:
+      measure:
+        name: food_revenue
+    filter: |
+      {{Dimension('product__product_price')}} > 10
