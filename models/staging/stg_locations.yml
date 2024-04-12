@@ -31,4 +31,4 @@ semantic_models:
       - name: average_tax_rate
         description: Average tax rate.
         expr: tax_rate
-        agg: average
+        agg: avg
