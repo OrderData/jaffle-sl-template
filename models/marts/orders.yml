@@ -122,3 +122,11 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  - name: new_customers_orders
+    type: simple
+    label: New Customers Orders
+    type_params:
+      measure:
+        name: order_count
+    filter: |
+      {{Dimension('customer__customer_type')}} = 'new'
