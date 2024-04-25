@@ -122,3 +122,12 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  - name: test_lag_metric
+    type: derived
+    label: Test Lag Metric
+    type_params:
+      expr: food_orders_1_year_ago
+      metrics:
+        - name: food_orders
+          alias: food_orders_1_year_ago
+          offset_window: 1 year
