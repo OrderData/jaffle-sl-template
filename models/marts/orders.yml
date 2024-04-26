@@ -122,3 +122,14 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  - name: test_metric_zinklar
+    type: ratio
+    label: Test metric zinklar
+    type_params:
+      numerator:
+        name: food_orders
+        filter: |
+          {{Dimension('location__location_name')}} = 'Chicago'
+        alias: food_orders_location_name_chicago
+      denominator:
+        name: orders
