@@ -122,3 +122,13 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  - name: x_vs_year_anterior
+    type: derived
+    label: X vs year anterior
+    type_params:
+      expr: orders / orders_1_year_ago
+      metrics:
+        - name: orders
+          alias: orders_1_year_ago
+          offset_window: 1 year
+        - name: orders
