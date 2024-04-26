@@ -122,3 +122,11 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  - name: specific_orders
+    type: simple
+    label: Specific Orders
+    type_params:
+      measure:
+        name: order_count
+    filter: |
+      {{Dimension('location__location_name')}} = 'Brooklyn'
