@@ -133,3 +133,9 @@ metrics:
           alias: revenue_is_drink_item_1
           filter: |
             {{Dimension('order_item__is_drink_item')}} = 1
+  - name: test_metric
+    type: simple
+    label: Test Metric
+    type_params:
+      measure:
+        name: food_revenue
