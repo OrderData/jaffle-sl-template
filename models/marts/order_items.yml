@@ -133,3 +133,15 @@ metrics:
           alias: revenue_is_drink_item_1
           filter: |
             {{Dimension('order_item__is_drink_item')}} = 1
+  - name: drinks_revenue_percentage
+    description: Revenue coming from drinks
+    type: derived
+    label: Drinks Revenue Percentage
+    type_params:
+      expr: revenue_is_drink_item_1*100 / revenue
+      metrics:
+        - name: revenue
+          alias: revenue_is_drink_item_1
+          filter: |
+            {{Dimension('order_item__is_drink_item')}} = 1
+        - name: revenue
