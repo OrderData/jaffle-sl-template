@@ -7,14 +7,11 @@ semantic_models:
     model: ref('order_items')
     entities:
       - name: order_item
-        type: primary
+        type: Primary
         expr: order_item_id
       - name: order_id
-        type: foreign
+        type: Foreign
         expr: order_id
-      - name: product
-        type: foreign
-        expr: product_id
     dimensions:
       - name: ordered_at
         expr: cast(ordered_at as DATETIME)
