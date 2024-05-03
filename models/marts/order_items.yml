@@ -15,6 +15,9 @@ semantic_models:
       - name: product
         type: foreign
         expr: product_id
+      - name: location
+        type: foreign
+        expr: location_id
     dimensions:
       - name: ordered_at
         expr: cast(ordered_at as DATETIME)
