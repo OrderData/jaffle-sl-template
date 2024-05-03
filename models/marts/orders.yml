@@ -56,7 +56,7 @@ semantic_models:
         type: foreign
         expr: location_id
       - name: customer
-        type: foreign
+        type: unique
         expr: customer_id
     dimensions:
       - name: ordered_at
