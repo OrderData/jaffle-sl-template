@@ -49,6 +49,9 @@ semantic_models:
         type: time
         type_params:
           time_granularity: day
+      - name: testing_dimension
+        type: categorical
+        expr: case when last_ordered_at is not null then true else false end
     measures:
       - name: count_lifetime_orders
         description: Total count of orders per customer.
@@ -72,16 +75,23 @@ semantic_models:
     dimensions:
       - name: customer_name_new
         type: categorical
+        expr: customer_name
       - name: customer_type_new
         type: categorical
+        expr: customer_type
       - name: first_ordered_at_new
         type: time
         type_params:
           time_granularity: day
+        expr: first_ordered_at
       - name: last_ordered_at_new
         type: time
         type_params:
           time_granularity: day
+        expr: last_ordered_at
+      - name: testing_dimension_new
+        type: categorical
+        expr: case when last_ordered_at is not null then true else false end
 
 metrics:
   # Simple metrics
