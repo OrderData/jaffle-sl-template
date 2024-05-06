@@ -49,9 +49,6 @@ semantic_models:
         type: time
         type_params:
           time_granularity: day
-      - name: testing_dimension
-        type: categorical
-        expr: case when last_ordered_at is not null then true else false end
     measures:
       - name: count_lifetime_orders
         description: Total count of orders per customer.
