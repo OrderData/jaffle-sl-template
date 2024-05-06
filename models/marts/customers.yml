@@ -59,6 +59,29 @@ semantic_models:
       - name: lifetime_spend
         agg: sum
         description: Gross customer lifetime spend inclusive of taxes.
+  - name: customers_new
+    defaults:
+      agg_time_dimension: first_ordered_at_new
+    description: |
+      Customer grain mart.
+    model: ref('customers')
+    entities:
+      - name: customer
+        expr: customer_id
+        type: primary
+    dimensions:
+      - name: customer_name_new
+        type: categorical
+      - name: customer_type_new
+        type: categorical
+      - name: first_ordered_at_new
+        type: time
+        type_params:
+          time_granularity: day
+      - name: last_ordered_at_new
+        type: time
+        type_params:
+          time_granularity: day
 
 metrics:
   # Simple metrics
