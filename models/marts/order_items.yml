@@ -43,6 +43,21 @@ semantic_models:
         agg: median
         expr: product_price
 
+  - name: order_item_josep_test
+    model: ref('order_items')
+    label: Order item
+    defaults:
+      agg_time_dimension: ordered_at_new
+    entities:
+      - name: order_item
+        type: primary
+        expr: order_item_id
+    dimensions:
+      - name: ordered_at_new
+        type: time
+        type_params:
+          time_granularity: day
+        expr: ordered_at
 metrics:
   # Simple metrics
   - name: revenue
