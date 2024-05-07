@@ -122,3 +122,16 @@ metrics:
       measure: order_count
     filter: |
       {{ Dimension('order_id__is_food_order') }} = true
+  # Conversion Metrics
+  - name: conversion_metric
+    description: The percentage of orders that contain a food item.
+    type: conversion
+    label: Conversion Metric
+    type_params:
+      conversion_type_params:
+        base_measure:
+          name: order_count
+        conversion_measure:
+          name: customers_with_orders
+        entity: order_id
+        calculation: conversion_rate
