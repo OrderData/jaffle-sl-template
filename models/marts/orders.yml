@@ -113,7 +113,10 @@ metrics:
     label: Orders
     type: simple
     type_params:
-      measure: order_count
+      measure:
+        name: order_count
+    filter: |
+      {{Dimension('order_id__is_drink_order')}} = 'true'
   - name: food_orders
     description: Count of orders that contain food order items
     label: Food Orders
