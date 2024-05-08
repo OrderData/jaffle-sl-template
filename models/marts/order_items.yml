@@ -17,6 +17,7 @@ semantic_models:
         expr: product_id
     dimensions:
       - name: ordered_at
+        label: Ordered at new
         expr: cast(ordered_at as DATETIME)
         type: time
         type_params:
