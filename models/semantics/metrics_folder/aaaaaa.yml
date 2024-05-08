@@ -1,0 +1,13 @@
+version: 2
+metrics:
+  - name: aaaaaa
+    type: conversion
+    label: aaaaaa
+    type_params:
+      conversion_type_params:
+        base_measure:
+          name: order_count
+        conversion_measure:
+          name: customers_with_orders
+        entity: order_id
+        calculation: conversion_rate
