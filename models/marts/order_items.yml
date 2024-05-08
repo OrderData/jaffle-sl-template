@@ -12,9 +12,6 @@ semantic_models:
       - name: order_id
         type: foreign
         expr: order_id
-      - name: product
-        type: foreign
-        expr: product_id
     dimensions:
       - name: ordered_at
         expr: cast(ordered_at as DATETIME)
