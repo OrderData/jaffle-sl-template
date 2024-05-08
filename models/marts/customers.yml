@@ -27,6 +27,7 @@ models:
 
 semantic_models:
   - name: customers
+    label: Customers
     defaults:
       agg_time_dimension: first_ordered_at
     description: |
