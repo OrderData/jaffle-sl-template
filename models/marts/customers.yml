@@ -36,6 +36,9 @@ semantic_models:
       - name: customer
         expr: customer_id
         type: primary
+      - name: location
+        type: foreign
+        expr: customer_id
     dimensions:
       - name: customer_name
         type: categorical
