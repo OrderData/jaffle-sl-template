@@ -46,11 +46,11 @@ semantic_models:
 metrics:
   # Simple metrics
   - name: revenue
-    description: Sum of the product revenue for each order item. Excludes tax.
     type: simple
-    label: Revenue
+    label: New test metric
     type_params:
-      measure: revenue
+      measure:
+        name: revenue
   - name: order_cost
     description: Sum of cost for each order item.
     label: Order Cost
