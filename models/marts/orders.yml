@@ -135,4 +135,3 @@ metrics:
           name: customers_with_orders
         entity: order_id
         calculation: conversion_rate
-        window: 7 days
