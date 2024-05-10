@@ -130,7 +130,7 @@ metrics:
     type_params:
       conversion_type_params:
         base_measure:
-          name: order_count
+          name: order_count 
         conversion_measure:
           name: customers_with_orders
         entity: order_id
