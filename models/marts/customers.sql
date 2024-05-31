@@ -14,7 +14,7 @@ orders_table as (
 
 order_items_table as (
 
-    select * from {{ ref('order_items') }}
+    select * from {{ ref('order_items') }} 
 ),
 
 order_summary as (
@@ -50,7 +50,9 @@ joined as (
         case
             when order_summary.is_repeat_buyer then 'returning'
             else 'new'
-        end as customer_type
+        end as customer_type,
+
+        true as customer_type_test,
 
     from customers
 
