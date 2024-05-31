@@ -52,7 +52,7 @@ joined as (
             else 'new'
         end as customer_type
 
-    from customers
+    from customers 
 
     left join order_summary
         on customers.customer_id = order_summary.customer_id
