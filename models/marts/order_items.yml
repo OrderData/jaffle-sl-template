@@ -122,13 +122,13 @@ metrics:
     type: derived
     label: Drinks Revenue Growth % M/M
     type_params:
-      expr: (revenue_is_drink_item_1-revenue_is_drink_item_1_1_month_ago)*100/revenue_is_drink_item_1_1_month_ago
+      expr: (revenue_is_drink_item_1-revenue_is_food_item_1_1_month_ago)*100/revenue_is_food_item_1_1_month_ago
       metrics:
         - name: revenue
-          alias: revenue_is_drink_item_1_1_month_ago
+          alias: revenue_is_food_item_1_1_month_ago
           offset_window: 1 month
           filter: |
-            {{Dimension('order_item__is_drink_item')}} = 1
+            {{Dimension('order_item__is_food_item')}} = 1
         - name: revenue
           alias: revenue_is_drink_item_1
           filter: |
